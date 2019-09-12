@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'mini-wakuwaku';
+    src: url('mini-wakuwaku.eot');
+    src: url('mini-wakuwaku.eot?#iefix') format('embedded-opentype'),
+        url('mini-wakuwaku.woff2') format('woff2'),
+        url('mini-wakuwaku.woff') format('woff'),
+        url('mini-wakuwaku.ttf') format('truetype'),
+        url('mini-wakuwaku.svg#mini-wakuwaku') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
