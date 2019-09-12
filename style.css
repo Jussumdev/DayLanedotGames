@@ -1,3 +1,17 @@
+/* @font-face {
+    font-family: 'mini-wakuwaku';
+    src: url('Fonts/mini-wakuwaku/mini-wakuwaku.eot');
+    src: url('Fonts/mini-wakuwaku/mini-wakuwaku.eot?#iefix') format('embedded-opentype'),
+        url('Fonts/mini-wakuwaku/mini-wakuwaku.woff2') format('woff2'),
+        url('Fonts/mini-wakuwaku/mini-wakuwaku.woff') format('woff'),
+        url('Fonts/mini-wakuwaku/mini-wakuwaku.ttf') format('truetype'),
+        url('Fonts/mini-wakuwaku/mini-wakuwaku.svg#mini-wakuwaku') format('svg');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+@import "Fonts/mini-wakuwaku/stylesheet.css"; 
+
 html {
   height: 100%;
 }
@@ -11,7 +25,7 @@ body{
 
 p{
   text-align: left;
-  font-family: 'mini-wakuwaku';
+  font-family: 'mini-wakuwakuregular';
   color:#ffffff;
   font-size:0.6cm;
 }
