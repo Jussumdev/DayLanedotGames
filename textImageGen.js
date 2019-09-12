@@ -113,7 +113,7 @@ function initializeLetters() {
     pos_y += 1 + lineSpace;
   }
 
-  console.log(letter_pos)
+  //console.log(letter_pos)
 }
 
 function positionLetters(){
@@ -203,8 +203,8 @@ function scaleLetters() {
 
     //Aspect ratio of the textblock
   textAspect = v3_textWidthHeight.x / v3_textWidthHeight.y;
-  console.log(v3_textWidthHeight);
-  console.log(textAspect+" "+getAspectRatio());
+  //console.log(v3_textWidthHeight);
+  //console.log(textAspect+" "+getAspectRatio());
 
   if (textAspect > getAspectRatio()) {
     //If text block is relatively wider than the screen, scale horizontally
@@ -224,6 +224,6 @@ function scaleLetters() {
     }
   }
 
-  console.log(letterHeight);
+  //console.log(letterHeight);
 
 }
