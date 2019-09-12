@@ -1,0 +1,72 @@
+
+@font-face {
+  font-family: 'waku';
+  src: url('Fonts/mini-wakuwaku/mini-wakuwaku.eot'); /* IE9 Compat Modes */
+  src: url('Fonts/mini-wakuwaku/mini-wakuwaku.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Fonts/mini-wakuwaku/mini-wakuwaku.woff2') format('woff2'), /* Super Modern Browsers */
+       url('Fonts/mini-wakuwaku/mini-wakuwaku.woff') format('woff'), /* Pretty Modern Browsers */
+       url('Fonts/mini-wakuwaku/mini-wakuwaku.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Fonts/mini-wakuwaku/mini-wakuwaku.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+html {
+  height: 100%;
+}
+
+body{
+  background: #E99188 top center no-repeat fixed;
+  background-size: cover;
+  padding:0px;
+  margin:0px;
+}
+
+p{
+  text-align: left;
+  font-family: 'mini-wakuwaku';
+  color:#ffffff;
+  font-size:0.6cm;
+}
+
+div, img, p{
+  padding:0px;
+  margin:0px;
+  border:0px;
+}
+
+img {
+  /* Disable dragging the image */
+  /* From https://stackoverflow.com/questions/12906789/preventing-an-image-from-being-draggable-or-selectable-without-using-js */
+  /* For Opera and <= IE9, we need to add unselectable="on" attribute onto each element */
+  /* Check this site for more details: http://help.dottoro.com/lhwdpnva.php */
+  -moz-user-select: none; /* These user-select properties are inheritable, used to prevent text selection */
+  -webkit-user-select: none;
+  -ms-user-select: none; /* From IE10 only */
+  user-select: none; /* Not valid CSS yet, as of July 2012 */
+  -webkit-user-drag: none; /* Prevents dragging of images/divs etc */
+  user-drag: none;
+}
+
+a {
+  text-decoration: none;
+  color: #BCE8F0;
+  text-shadow: 0px 0.12em 0vh #777777;
+}
+
+a:hover {
+  opacity: 0.3;
+}
+
+.mainTextDiv {
+  padding-top:5%;
+  padding-left:15%;
+  padding-right:15%;
+}
+
+.mainTextDiv p {
+  text-align:center;
+}
+
+.title {
+  font-size: 0.8cm;
+  text-shadow: 0px 0.12em 0vh #777777;
+}
