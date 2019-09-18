@@ -1,0 +1,202 @@
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 96%;
+}
+
+.columnAuto {
+    vertical-align: middle;
+    float: left;
+    padding: 0px;
+}
+
+.columnPrimary {
+    vertical-align: middle;
+    float: left;
+    width: 70%;
+}
+
+.columnSecondary {
+    vertical-align: middle;
+    float: left;
+    width: 30%;
+}
+
+.columnSmallW {
+    vertical-align: middle;
+    float: left;
+    width: 15%;
+}
+
+.columnLargeW {
+    vertical-align: middle;
+    float: left;
+    width: 70%;
+}
+
+.column {
+    vertical-align: middle;
+    min-height: 1px;
+    float: left;
+}
+
+.leftW, .rightW {
+  width: 15%;
+}
+
+.middleW {
+  width: 70%
+}
+
+.columnThird {
+  vertical-align: middle;
+  min-height: 1px;
+  float: left;
+  width: 33.33%;
+}
+
+.columnHalf {
+  vertical-align: middle;
+  min-height: 1px;
+  float: left;
+  width: 50%;
+}
+
+.columnFull {
+  vertical-align: middle;
+  min-height: 1px;
+  float: left;
+  width: 100%;
+}
+
+.columnQuarter {
+  vertical-align: middle;
+  min-height: 1px;
+  float: left;
+  width: 25%;
+}
+
+.columnSixth {
+  vertical-align: middle;
+  min-height: 1px;
+  float: left;
+  width: 16.6%;
+}
+
+.columnTwoThirds {
+  vertical-align: middle;
+  min-height: 1px;
+  float: left;
+  width: 66.6%;
+}
+
+.row {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.center-vid {
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.CenterLeftMobile {
+  text-align:center;
+}
+
+.RightLeftMobile {
+  text-align:right;
+}
+
+.LeftRightMobile {
+  text-align:left;
+}
+
+.columnMobileStack {
+  /*pass*/
+}
+
+.columnMobileHalf {
+  /*pass*/
+}
+
+.columnMobileThird {
+  /*pass*/
+}
+
+.columnMobileRemove {
+  /*pass*/
+}
+
+.elementDividerText {
+  /*pass*/
+}
+
+
+.copyrightText:after {
+  /*pass*/
+}
+
+@media all and (max-width: 50em)
+{
+
+    .columnMobileStack
+    {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+
+    .columnMobileHalf
+    {
+        display: block;
+        float: left;
+        width: 50%;
+    }
+
+    .columnMobileThird {
+      display: block;
+      float: left;
+      width: 33%;
+    }
+
+    .columnMobileRemove {
+        display: none;
+        width: 0%;
+    }
+
+    .CenterLeftMobile, .RightLeftMobile
+    {
+      text-align:left;
+    }
+
+    .LeftRightMobile {
+      text-align:right;
+    }
+
+
+    .elementDividerText span {
+      display: none;
+    }
+    .elementDividerText:after {
+      content: "";
+    }
+
+
+    .copyrightText span {
+      display: none;
+    }
+
+}

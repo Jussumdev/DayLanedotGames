@@ -1,4 +1,4 @@
-@import "Fonts/mini-wakuwaku/stylesheet.css"; 
+@import "Fonts/mini-wakuwaku/stylesheet.css";
 
 html {
   height: 100%;
@@ -47,6 +47,21 @@ a:hover {
   opacity: 0.3;
 }
 
+.columnHalf {
+  vertical-align: middle;
+  min-height: 1px;
+  float: left;
+  width: 50%;
+}
+
+.center-vid {
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
 .mainTextDiv {
   padding-top:10%;
   padding-left:15%;
@@ -54,11 +69,37 @@ a:hover {
   padding-bottom:10%;
 }
 
-.mainTextDiv p {
+.textDiv {
+  padding-top:4%;
+  padding-left:15%;
+  padding-right:15%;
+  padding-bottom:4%;
+}
+
+.mainTextDiv p, .textDiv p {
   text-align:center;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.flex-container div {
+  flex-basis: 50%;
+}
+
+.flex-container div img {
+  width: 100%;
 }
 
 .title {
   font-size: 0.8cm;
   text-shadow: 0px 0.12em 0vh #777777;
+}
+
+.flavorText {
+  font-style: italic;
 }

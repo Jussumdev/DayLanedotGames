@@ -11,7 +11,7 @@ a = {
     {
   		text: "smile for me",
   		col: "#D1C8F5",
-  		link: "https://store.steampowered.com/app/1018850/Smile_For_Me/"
+  		link: "smileforme.html"
   	},
     {
   		text: "twitter",
