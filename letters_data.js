@@ -4,7 +4,7 @@ a = {
 
   array: [
   	{
-  		text: "gabe lane",
+  		text: "about gabe",
   		col: "#ffffff",
   		link: "about.html"
   	},

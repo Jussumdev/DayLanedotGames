@@ -80,6 +80,30 @@ a:hover {
   text-align:center;
 }
 
+.fixedCopyright {
+  position: fixed;
+  bottom:0%;
+  width:100%;
+}
+
+.aboluteCopyright {
+  position: absolute;
+  width:100%;
+}
+
+.fixedCopyright p, .absoluteCopyright p {
+  padding: 1vh;
+  font-size: 3vh;
+  text-align: center;
+  vertical-align: center;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.fixedCopyright p::after, .absoluteCopyright p::after {
+  content: "2019 Gabe Lane";
+}
+
 .flex-container {
   display: flex;
   flex-wrap: wrap;
