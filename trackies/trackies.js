@@ -19,6 +19,7 @@ var tr_height = []
 
 
 function initializeTrackies() {
+  var trackies_sub_path = getTrackiesPath();
   var actual_JSON = getTrackiesData().array
   //Create trackies according to the js data structure
   for (var i=0; i<actual_JSON.length; i++) {
@@ -40,38 +41,54 @@ function initializeTrackies() {
     tr_height[i] = jsonobj.height
 
     newEl.id = "trackie";
-    newEl.src = "Images/"+jsonobj.src;
+    newEl.src = "images/trackies/"+trackies_sub_path+"/"+jsonobj.src;
     newEl.style = "z-index:"+jsonobj.z+"px;position: fixed;";
 
     trackies[i] = newEl
-    scaleElement(i)
+    scaleElement(i, jsonobj.z)
 
     document.body.appendChild(newEl)
   }
 }
 
-function track(v3_mouseToUse){
-    //The vector defining the direction and magnitude to move
-  var v3_trackVector = v3_mouseToUse
-  v3_trackVector = v3_trackVector.subtract(getOrigin())
-
+function trackWithMouse(v3_mouseToUse) {
+    //Get a vector indicating the direction to shift
+  var v3_trackVector = v3_mouseToUse.subtract(getOrigin())
     //Get the clamped magnitude of the vector in 0...1 to indicate how far elements should move
   var magnitude = Math.min(v3_trackVector.length(), getMaxDetectionRadius()) / getMaxDetectionRadius()
+
+  track(v3_trackVector.unit(), magnitude)
+}
+
+function trackWithGyroscope(v3_angle) {
+    //
+
+  var magnitude = v3_angle.length()
+
+
+  //console.log(magnitude)
+
+  track(v3_angle.unit(), magnitude)
+}
+
+//Use an x-y angle and a magnitude (0...1) to move all trackie images
+function track(v3_angle, magnitude){
+
     //Move farther if the magnitude is high
-  v3_trackVector = v3_trackVector.unit().multiply(getMaxMovementRadius() * magnitude)
+  v3_trackVector = v3_angle.multiply(getMaxMovementRadius() * magnitude)
 
   for (var i=0; i<trackies.length; i++) {
     var el = trackies[i]
 
       //Get the position that the element should inhabit this frame
-    var v3_basePos = getOrigin().add(tr_pos[i].multiply(getWindowMin() / 2))
+    var v3_basePos = getOrigin().add(tr_pos[i].multiply(getAppropriateFrameSize(tr_pos[i].z)))
     //v3_basePos = v3_basePos.add(v3_startPos)
     v3_basePos = v3_basePos.add(v3_trackVector.multiply(tr_pos[i].z))
 
       //Place element at the target
     setElementPos(el, v3_basePos)
 
-    scaleElement(i)
+    scaleElement(i, tr_pos[i].z)
   }
 
 }
@@ -95,15 +112,22 @@ window.setInterval(function(){
   //console.log(dt)
 
   var frameSmooth = 1 - Math.pow(mouseSmoothing, dt / 1000)
-  mouseLerp(frameSmooth)
-  mouseBob(bobrate, bobmagnitude)
-  track(getMouseBobbed())
-  //positionIcons()
+
+  if (getAspectRatio() > 1) {
+    //Use the mouse position to track
+    mouseLerp(frameSmooth)
+    mouseBob(bobrate, bobmagnitude)
+    trackWithMouse(getMouseBobbed())
+  } else {
+    //use tilt instead
+    trackWithGyroscope(getGyroscopeAnglesLerped(true))
+  }
+
 }, 1000 / trackFramerate);
 
 
-function scaleElement(i) {
-  setElementHeight(trackies[i], tr_height[i] * getWindowMin()/2)
+function scaleElement(i, z) {
+  setElementHeight(trackies[i], tr_height[i] * getAppropriateFrameSize(z))
 }
 
 window.onload = function(){

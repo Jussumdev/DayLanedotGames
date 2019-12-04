@@ -1,3 +1,9 @@
+function getTrackiesPath() {
+  //Name of the page that these trackies will appear on
+  //Used to retrieve the images from the subdirectory in /images
+  return "selfportrait"
+}
+
 function getTrackiesData() {
 
 a = {
@@ -73,20 +79,6 @@ a = {
   		y: 0.2980127396539789,
   		z: 0.25,
   		height: 0.23083103486351342
-  	},
-  	{
-  		src: "EyeRight.svg",
-  		x: 0.5544854925255223,
-  		y: 0.5033578445703222,
-  		z: 0.5,
-  		height: 0.07921437287193356
-  	},
-  	{
-  		src: "EyeLeft.svg",
-  		x: 0.3640067471223645,
-  		y: 0.4719902523141568,
-  		z: 0.45,
-  		height: 0.06001587398654251
   	},
   	{
   		src: "Hair.svg",
@@ -234,6 +226,20 @@ a = {
   		y: 0.5786850924971592,
   		z: 0.23,
   		height: 0.10652115732132494
+  	},
+  	{
+  		src: "EyeRight.svg",
+  		x: 0.5544854925255223,
+  		y: 0.5033578445703222,
+  		z: 0.5,
+  		height: 0.07921437287193356
+  	},
+  	{
+  		src: "EyeLeft.svg",
+  		x: 0.3640067471223645,
+  		y: 0.4719902523141568,
+  		z: 0.45,
+  		height: 0.06001587398654251
   	},
   	{
   		src: "Button.svg",

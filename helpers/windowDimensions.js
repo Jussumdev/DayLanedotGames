@@ -45,14 +45,22 @@ function setDimensions() {
 
   v3_origin = new Vector(v3_windowDim.x / 2, v3_windowDim.y / 2, 0)
 
-  //The size and positioning of elements lerps between these two values using z{0...1}
-  //This mimics perspective, since closer elements are larger and more spread out
-  original_frame_size = windowMin * 0.5      //The size of the frame for z = 0
-  max_expanded_frame_size = windowMin * 0.6   //The size of the frame for z = 1
+  if (aspect_ratio > 1) {
+    //Desktop
+      //The size and positioning of elements lerps between these two values using z{0...1}
+      //This mimics perspective, since closer elements are larger and more spread out
+    original_frame_size = windowMin * 0.5      //The size of the frame for z = 0
+    max_expanded_frame_size = windowMin * 0.6   //The size of the frame for z = 1
+  } else {
+    //Mobile
+    original_frame_size = windowMin * 1
+    max_expanded_frame_size = windowMin * 1.2
+  }
 
-  max_detection_radius = windowMin * 0.55
-  max_movement_radius = windowMin * 0.085
+    //Detection radius for mouse
+  max_detection_radius = windowMin * 0.75
 
+  max_movement_radius = original_frame_size * 0.2
 
 }
 

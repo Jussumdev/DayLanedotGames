@@ -63,3 +63,7 @@ function isLetter(str) {
 
   return str.length === 1 && str.match(/[a-z]/i);
 }
+
+function clamp(a, min, max) {
+  return Math.min(Math.max(a, min), max);
+}

@@ -1,4 +1,6 @@
-@import "Fonts/mini-wakuwaku/stylesheet.css";
+/* Main stylesheet for the website */
+
+@import "fonts/mini-wakuwaku/stylesheet.css";
 
 html {
   height: 100%;
