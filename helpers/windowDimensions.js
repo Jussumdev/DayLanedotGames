@@ -1,13 +1,9 @@
 
 
-var aspect_ratio, windowMin, original_frame_size, max_expanded_frame_size, max_detection_radius, max_movement_radius, v3_origin, v3_windowDim
+var aspect_ratio, windowMin, frame_size, max_detection_radius, max_movement_radius, v3_origin, v3_windowDim
 
 function getWindowMin() {
   return windowMin
-}
-
-function getWindowMinRaw() {
-  return windowMinRaw
 }
 
 function getMaxDetectionRadius() {
@@ -30,6 +26,10 @@ function getAspectRatio() {
   return aspect_ratio
 }
 
+function getFrameSize() {
+  return frame_size
+}
+
 
 window.addEventListener("resize", setDimensions);
 
@@ -41,29 +41,22 @@ function setDimensions() {
   aspect_ratio = v3_windowDim.x / v3_windowDim.y
 
   windowMin = Math.min(v3_windowDim.x, v3_windowDim.y)
-  windowMinRaw = windowMin
 
   v3_origin = new Vector(v3_windowDim.x / 2, v3_windowDim.y / 2, 0)
 
   if (aspect_ratio > 1) {
     //Desktop
-      //The size and positioning of elements lerps between these two values using z{0...1}
-      //This mimics perspective, since closer elements are larger and more spread out
-    original_frame_size = windowMin * 0.5      //The size of the frame for z = 0
-    max_expanded_frame_size = windowMin * 0.6   //The size of the frame for z = 1
+    frame_size = windowMin * 0.5
   } else {
     //Mobile
-    original_frame_size = windowMin * 1
-    max_expanded_frame_size = windowMin * 1.2
+    frame_size = windowMin * 1.1
   }
 
     //Detection radius for mouse
   max_detection_radius = windowMin * 0.75
 
-  max_movement_radius = original_frame_size * 0.2
+  max_movement_radius = frame_size * 0.2
 
-}
+  console.log(frame_size, max_detection_radius, max_movement_radius)
 
-function getAppropriateFrameSize(zvalue) {
-    return lerp(original_frame_size, max_expanded_frame_size, zvalue)
 }

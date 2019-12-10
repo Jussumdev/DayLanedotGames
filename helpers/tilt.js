@@ -61,7 +61,7 @@ function handleOrientation(event) {
   v3_angles.x = clamp(gamma, -1 * gyroscopeMaxAngleX, gyroscopeMaxAngleX) / gyroscopeMaxAngleX
   v3_angles.y = clamp(beta, -1 * gyroscopeMaxAngleY, gyroscopeMaxAngleY) / gyroscopeMaxAngleY
 
-  console.log(v3_angles)
+  //console.log(v3_angles)
 }
 
 //Get a vector 3 representing the gyroscope angle of the phone in the x and y positions

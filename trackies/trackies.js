@@ -31,8 +31,6 @@ function initializeTrackies() {
     jsonobj.x -= 0.5
     jsonobj.y -= 0.5
 
-    var frameSize = getAppropriateFrameSize(jsonobj.z)
-
     //Parse and assign the ideal position for the element
     //Use normalized x, y to get appropriate offset for the element
     tr_pos[i] = new Vector(jsonobj.x,
@@ -45,7 +43,8 @@ function initializeTrackies() {
     newEl.style = "z-index:"+jsonobj.z+"px;position: fixed;";
 
     trackies[i] = newEl
-    scaleElement(i, jsonobj.z)
+
+    scaleElement(i)
 
     document.body.appendChild(newEl)
   }
@@ -61,12 +60,8 @@ function trackWithMouse(v3_mouseToUse) {
 }
 
 function trackWithGyroscope(v3_angle) {
-    //
 
   var magnitude = v3_angle.length()
-
-
-  //console.log(magnitude)
 
   track(v3_angle.unit(), magnitude)
 }
@@ -81,16 +76,18 @@ function track(v3_angle, magnitude){
     var el = trackies[i]
 
       //Get the position that the element should inhabit this frame
-    var v3_basePos = getOrigin().add(tr_pos[i].multiply(getAppropriateFrameSize(tr_pos[i].z)))
-    //v3_basePos = v3_basePos.add(v3_startPos)
+    var v3_basePos = getOrigin().add(tr_pos[i].multiply(getFrameSize() * 1.04))
+
     v3_basePos = v3_basePos.add(v3_trackVector.multiply(tr_pos[i].z))
 
       //Place element at the target
     setElementPos(el, v3_basePos)
-
-    scaleElement(i, tr_pos[i].z)
   }
 
+}
+
+function scaleElement(i) {
+  setElementHeight(trackies[i], tr_height[i] * getFrameSize())
 }
 
 //Exponentially smaller value results in linearly smoother mouse motion
@@ -125,13 +122,7 @@ window.setInterval(function(){
 
 }, 1000 / trackFramerate);
 
-
-function scaleElement(i, z) {
-  setElementHeight(trackies[i], tr_height[i] * getAppropriateFrameSize(z))
-}
-
 window.onload = function(){
   setDimensions()
   initializeTrackies()
-  //initializeIcons()
 };
