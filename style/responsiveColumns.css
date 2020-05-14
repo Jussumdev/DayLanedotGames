@@ -152,10 +152,6 @@
   /*pass*/
 }
 
-.increaseFontSizeMobile {
-  /*pass*/
-}
-
 .doubleFontSizeMobile {
   /*pass*/
 }
@@ -217,10 +213,6 @@
 
     .copyrightText span {
       display: none;
-    }
-
-    .increaseFontSizeMobile {
-      font-size: 1.75em;
     }
 
     .doubleFontSizeMobile {

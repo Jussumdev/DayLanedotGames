@@ -1,6 +1,6 @@
 img {
-  -webkit-filter: drop-shadow(0px 2.5vw 1vw #af3a3a80);
-  filter: drop-shadow(0px 2.5vw 1vw #af3a3a80);
+  -webkit-filter: drop-shadow(0px 1.2vw 0vw #af3a3a80);
+  filter: drop-shadow(0px 1.2vw 0vw #af3a3a80);
 }
 
 /* p {
@@ -10,6 +10,10 @@ img {
 
 body{
   background: #a991a3;
+}
+
+.noPad{
+  padding: 0px;
 }
 
 .workBoxR, .workBoxL{
@@ -33,7 +37,7 @@ body{
 }
 
 .workBoxImg {
-  width: 28%;
+  width: 18%; /*28%*/
   padding: 1%;
 }
 .workBoxImg img {
@@ -41,7 +45,7 @@ body{
 }
 
 .workBoxTitle{
-  font-size: 4.5vw;
+  font-size: 5vh;
   /* font-style: italic; */
   white-space: normal;
   text-shadow: 0px 0.12em 0vh #af3a3a80;
@@ -49,7 +53,7 @@ body{
 
 .workBoxText {
   padding: 3% 1% 1% 1%;
-  font-size: 2.5vw;
+  font-size: 4vh;
   text-shadow: 0px 0px 0px #00000000;
   /* text-shadow: 0px 0.12em 0vh #af3a3a80; */
 }
@@ -70,5 +74,20 @@ a:hover {
 }
 
 a:hover div {
-  opacity: 0.45;
+  opacity: 0.75;
+}
+
+@media all and (max-width: 50em) {
+  .workBoxImg {
+    width: 29%;
+  }
+
+  .workBoxTitle {
+    font-size: 8vw;
+  }
+
+  .workBoxText {
+    font-size: 6vw;
+  }
+
 }
