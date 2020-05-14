@@ -17,7 +17,9 @@ p{
   text-align: left;
   font-family: 'mini-wakuwakuregular';
   color:#ffffff;
-  font-size:0.6cm;
+  font-size:0.75cm;
+  /* text-shadow: #00000045 .0em .15em .0em */
+  /* text-shadow: #00000080 .0em .15em .4em; */
 }
 
 div, img, p{
@@ -41,12 +43,20 @@ img {
 
 a {
   text-decoration: none;
-  color: #BCE8F0;
-  text-shadow: 0px 0.12em 0vh #777777;
+  font-size: 1em;
+  color: #217175;
+  /* text-shadow: 0px 0.12em 0vh #aae2e299; */
+  text-shadow: 0px 0.12em 0vh #00000024;
 }
 
 a:hover {
   opacity: 0.3;
+}
+
+.flavorText {
+  font-style: italic;
+  opacity: 0.5;
+  /* color: ; */
 }
 
 .columnHalf {
@@ -65,10 +75,10 @@ a:hover {
 }
 
 .mainTextDiv {
-  padding-top:10%;
-  padding-left:15%;
-  padding-right:15%;
-  padding-bottom:10%;
+  padding-top: 3%;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-bottom: 2%;
 }
 
 .textDiv {
@@ -80,6 +90,23 @@ a:hover {
 
 .mainTextDiv p, .textDiv p {
   text-align:center;
+}
+
+.titleDiv {
+  padding: 2%;
+}
+
+.titleDiv p {
+  text-align: center;
+  font-size: 2.4em;
+  text-shadow: 0px 0.12em 0vh #777777;
+}
+
+.titleDiv img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 .fixedCopyright {
@@ -103,29 +130,38 @@ a:hover {
 }
 
 .fixedCopyright p::after, .absoluteCopyright p::after {
-  content: "2019 Gabe Lane";
+  content: "2020 Gabe Lane";
 }
 
-.flex-container {
+/* .flexJustifyRight {
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  align-content: flex-start;
+  align-items: flex-end;
+} */
+
+.flexContainer {
   display: flex;
-  flex-wrap: wrap;
+  flex: wrap;
   justify-content: center;
-  align-items: flex-start;
+  flex-direction: reverse;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-end;
 }
 
-.flex-container div {
+.flexContainer div {
+  align-self: auto;
   flex-basis: 50%;
+  max-width: 50%;
+  max-height: 50%;
 }
 
-.flex-container div img {
+.flexContainer div img {
   width: 100%;
 }
 
-.title {
-  font-size: 0.8cm;
-  text-shadow: 0px 0.12em 0vh #777777;
-}
-
-.flavorText {
-  font-style: italic;
+.flexBreak {
+  flex-basis: 100%;
+  height: 0;
 }

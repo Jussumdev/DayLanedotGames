@@ -4,35 +4,72 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>about Smile For Me</title>
+  <title>Smile For Me</title>
 
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" type="text/css" href="style/responsiveColumns.css">
+  <link rel="stylesheet" type="text/css" href="style/smileforme.css">
+
   <link rel="shortcut icon" href="favicon.ico?r=31241" type="image/x-icon" />
+
+  <script src="helpers/helpers.js"></script>
+  <script src="helpers/periodicRotation.js"></script>
+  <script src="helpers/periodicLetterBobbing.js"></script>
 </head>
 
 <body>
-  <div class = mainTextDiv style="padding-bottom:0%">
-    <p class = title>
+  <div class = "row">
+
+    <div class = "columnThird columnMobileRemove">
+      <div class = "flexContainer" style="opacity:1.0;padding:0% 3%">
+        <div><img src="images/smileforme/Awards/IGFLaurels.png"></img></div>
+        <div><img src="images/smileforme/Awards/IndieCadeLaurels.png"></img></div>
+      </div>
+    </div>
+
+    <!-- <div class = "columnSixth columnMobileShow"></div> -->
+
+    <!-- <div class = "columnThird columnMobileTwoThirds"> -->
+    <div class = "columnThird columnMobileStack">
+      <div class = "titleDiv js_rotate" data-js_rotate_rate = "0" data-js_rotate_magnitude = "0">
+        <img src = "images/smileforme/textlogo.png"></img>
+      </div>
+    </div>
+
+    <!-- <div class = "columnSixth columnMobileShow"></div> -->
+
+    <div class = "columnThird columnMobileRemove">
+      <div class = "flexContainer" style="opacity:1.0;padding:0% 3%">
+        <div><img src="images/smileforme/Awards/BFIGLaurels.png"></img></div>
+        <div><img src="images/smileforme/Awards/MaltBabyLaurels.png"></img></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class = mainTextDiv>
+    <!-- <p class = title>
       SMILE FOR ME
-      <br><br><br>
-    </p>
+    </p> -->
     <p>
-      <span class="flavorText">A heartbroken clown, wayward souls, and juicy mechanical lips. As "The Big Event" draws near, help the troubled residents of the Habitat and de-mask the mysterious Doctor Habit... before it's too late.</span>
-      <br><br><br>Smile For Me is an unconventional first-person Puzzle Adventure about making people happy. Immersed in a curious world, you must rely on your nodding, shaking, and wits to get by.
+      <span class="flavorText">
+      A heartbroken clown, wayward souls, and juicy mechanical lips. As "The Big Event" draws near, help the troubled residents of the Habitat and de-mask the mysterious
+      <a href="habit.html" class = "secretLink js_bob" data-js_bob_var='5,0.15,0.2'>Doctor&nbspHabit</a>
+      ... before it's too late.</span>
+      <br><br><br>Smile For Me is an unconventional Puzzle Adventure about making people happy. In a curious world, you must rely on your nodding, shaking, and wits to get by.
       <br><br>Developed in a year by Gabe Lane and Yugo Limbo, Smile For Me tells a unique story of love, humanity, and forgiveness.
       <br><br><br>
       <a href="http://smileformegame.com/about.html">Website</a>&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="http://limbolane.com/presskit/SmileForMe/index.html">Presskit()</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://limbolane.com/presskit/SmileForMe/index.html">PressKit</a>&nbsp;&nbsp;&nbsp;&nbsp;
       <a href="https://store.steampowered.com/app/1018850/Smile_For_Me/">Steam</a>&nbsp;&nbsp;&nbsp;&nbsp;
       <a href="https://gabelane.itch.io/smileforme">Itch.io</a>
     </p>
 
   </div>
 
-  <div class = textDiv>
-    <p class = title>
+  <div class = "titleDiv js_rotate" data-js_rotate_rate = "2" data-js_rotate_magnitude = "4">
+    <p>
       Trailer:
     </p>
   </div>
@@ -52,21 +89,30 @@
     </div>
   </div>
 
-  <div class="row" style="width:100%">
+  <!-- <div class="row" style="width:100%">
     <div class = "columnQuarter columnMobileRemove"></div>
     <div class = "columnHalf columnMobileStack">
-      <div class = "flex-container">
-        <div><img src="images/Awards/IGFLaurels.png"></img></div>
-        <div><img src="images/Awards/IndieCadeLaurels.png"></img></div>
-        <div><img src="images/Awards/BFIGLaurels.png"></img></div>
-        <div><img src="images/Awards/MaltBabyLaurels.png"></img></div>
+      <div class = "flexContainer">
+        <div><img src="images/smileforme/Awards/IGFLaurels.png"></img></div>
+        <div><img src="images/smileforme/Awards/IndieCadeLaurels.png"></img></div>
+        <div><img src="images/smileforme/Awards/BFIGLaurels.png"></img></div>
+        <div><img src="images/smileforme/Awards/MaltBabyLaurels.png"></img></div>
       </div>
     </div>
     <div class = "columnQuarter columnMobileRemove"></div>
+  </div> -->
+
+  <div class="row columnMobileShow" style="width:100%">
+    <div class = "flexContainer">
+      <div><img src="images/smileforme/Awards/IGFLaurels.png"></img></div>
+      <div><img src="images/smileforme/Awards/IndieCadeLaurels.png"></img></div>
+      <div><img src="images/smileforme/Awards/BFIGLaurels.png"></img></div>
+      <div><img src="images/smileforme/Awards/MaltBabyLaurels.png"></img></div>
+    </div>
   </div>
 
-  <div class = textDiv>
-    <p class = title>
+  <div class = "titleDiv js_rotate" data-js_rotate_rate = "2" data-js_rotate_magnitude = "4">
+    <p>
       Get it Now:
     </p>
   </div>

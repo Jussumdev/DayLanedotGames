@@ -1,0 +1,30 @@
+
+body{
+  background: #000000;
+}
+
+p {
+  font-family: 'mini-wakuwakuregular';
+  color: #dcd5d5;
+  font-weight: 900;
+}
+
+a {
+  color: #f7d9d9;
+  font-size: 1.25em;
+  text-shadow: 0px 0.12em 0vh #a75858;
+  /* text-decoration: underline; */
+}
+
+.secretLink {
+  color: inherit;
+  font-size: inherit;
+  text-shadow: inherit;
+}
+
+.titleDiv p {
+  /* color: #f7d9d9;
+  text-shadow: 0px 0.12em 0vh #a75353; */
+  color: #dcd5d5;
+  text-shadow: 0px 0.09em 0vh #a75353;
+}

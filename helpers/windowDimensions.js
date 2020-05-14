@@ -46,7 +46,7 @@ function setDimensions() {
 
   if (aspect_ratio > 1) {
     //Desktop
-    frame_size = windowMin * 0.5
+    frame_size = windowMin * 0.75
   } else {
     //Mobile
     frame_size = windowMin * 1.1

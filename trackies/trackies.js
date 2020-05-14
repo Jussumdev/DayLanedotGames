@@ -63,7 +63,7 @@ function trackWithGyroscope(v3_angle) {
 
   var magnitude = v3_angle.length()
 
-  track(v3_angle.unit(), magnitude)
+  track(v3_angle.unit(), -magnitude)
 }
 
 //Use an x-y angle and a magnitude (0...1) to move all trackie images
@@ -122,7 +122,5 @@ window.setInterval(function(){
 
 }, 1000 / trackFramerate);
 
-window.onload = function(){
-  setDimensions()
-  initializeTrackies()
-};
+addOnLoad(setDimensions)
+addOnLoad(initializeTrackies)

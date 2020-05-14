@@ -140,12 +140,23 @@
   /*pass*/
 }
 
+.columnMobileShow {
+  display: none;
+}
+
 .elementDividerText {
   /*pass*/
 }
 
-
 .copyrightText:after {
+  /*pass*/
+}
+
+.increaseFontSizeMobile {
+  /*pass*/
+}
+
+.doubleFontSizeMobile {
   /*pass*/
 }
 
@@ -172,9 +183,18 @@
       width: 33%;
     }
 
+    .columnMobileTwoThirds {
+      display: block;
+      float: left;
+      width: 66%;
+    }
+
     .columnMobileRemove {
         display: none;
         width: 0%;
+    }
+    .columnMobileShow {
+      display: block;
     }
 
     .CenterLeftMobile, .RightLeftMobile
@@ -197,6 +217,14 @@
 
     .copyrightText span {
       display: none;
+    }
+
+    .increaseFontSizeMobile {
+      font-size: 1.75em;
+    }
+
+    .doubleFontSizeMobile {
+      font-size: 2em;
     }
 
 }

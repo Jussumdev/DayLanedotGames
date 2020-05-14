@@ -9,9 +9,9 @@ a = {
   		link: "about.html"
   	},
     {
-  		text: "smile for me",
+  		text: "games",
   		col: "#D1C8F5",
-  		link: "smileforme.html"
+  		link: "games.html"
   	},
     {
   		text: "twitter",
@@ -19,9 +19,9 @@ a = {
   		link: "https://twitter.com/GabeOfLane"
   	},
     {
-  		text: "self portrait",
+  		text: "get in touch",
   		col: "#F7F1BB",
-  		link: "selfportrait.html"
+  		link: "contact.html"
   	}
 
   ]
