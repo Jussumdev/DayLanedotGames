@@ -59,13 +59,8 @@ body{
   opacity: 0.6;
 }
 
-
 a {
-  all:initial;
-}
-
-a:hover {
-  all:initial;
+  color: #690e51;
 }
 
 a:hover div {

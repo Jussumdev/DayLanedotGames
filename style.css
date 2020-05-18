@@ -44,7 +44,7 @@ img {
 a {
   text-decoration: none;
   font-size: 1em;
-  color: #217175;
+  color: #ffffff;
   /* text-shadow: 0px 0.12em 0vh #aae2e299; */
   text-shadow: 0px 0.12em 0vh #00000024;
 }
@@ -113,11 +113,13 @@ a:hover {
   position: fixed;
   bottom:0%;
   width:100%;
+  z-index: -5;
 }
 
 .aboluteCopyright {
   position: absolute;
   width:100%;
+  z-index: -5;
 }
 
 .fixedCopyright p, .absoluteCopyright p {
@@ -129,8 +131,18 @@ a:hover {
   opacity: 0.5;
 }
 
-.fixedCopyright p::after, .absoluteCopyright p::after {
+.fixedCopyright p::before, .absoluteCopyright p::before {
   content: "2020 Gabe Lane";
+}
+
+.footerHomeLink {
+  font-size: 1em;
+  text-shadow: none;
+  text-decoration: none;
+}
+
+.footerHomeLink::after {
+  content: " (Back to Home)"
 }
 
 /* .flexJustifyRight {

@@ -2,3 +2,7 @@ body{
   background: rgb(54,146,156);
   background: linear-gradient(0deg, rgba(54,146,156,1) 0%, rgba(174,228,189,1) 100%);
 }
+
+a {
+  color: #100e0f;
+}
