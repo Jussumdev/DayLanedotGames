@@ -4,7 +4,7 @@ a = {
 
   array: [
   	{
-  		text: "about gabe",
+  		text: "about day",
   		col: "#ffffff",
   		link: "about.html"
   	},
@@ -16,7 +16,7 @@ a = {
     {
   		text: "twitter",
   		col: "#B3D0ED",
-  		link: "https://twitter.com/GabeOfLane"
+  		link: "https://twitter.com/DayOfLane"
   	},
     {
   		text: "get in touch",

@@ -132,7 +132,7 @@ a:hover {
 }
 
 .fixedCopyright p::before, .absoluteCopyright p::before {
-  content: "2020 Gabe Lane";
+  content: "2021 Day Lane";
 }
 
 .footerHomeLink {

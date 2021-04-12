@@ -133,7 +133,7 @@ def main():
 
         rawtext = svgContentList[i]
 
-        # path = None 
+        # path = None
         # xmin = xmax = ymin = ymax = 0
 
         # if (rawtext.find(' d="') >= 0):
@@ -172,13 +172,13 @@ def main():
 
         print("y: "+str(ymin)+" "+str(ymax))
         print("x: "+str(xmin)+" "+str(xmax))
-        size = [  
+        size = [
             (xmax - xmin),
             (ymax - ymin)
         ]
         print(size)
         print("\n")
-        center = [  
+        center = [
             (xmax + xmin) / 2.0,
             (ymax + ymin) / 2.0
         ]
