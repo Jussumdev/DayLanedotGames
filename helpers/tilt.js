@@ -75,4 +75,4 @@ function getGyroscopeAnglesLerped(inverted = false) {
   return inverted ? v3_angles_lerped.negative() : v3_angles_lerped;
 }
 
-window.addEventListener("deviceorientation", handleOrientation, twrue);
+window.addEventListener("deviceorientation", handleOrientation, true);
