@@ -30,7 +30,7 @@ assignSettings()
 
 
 function handleOrientation(event) {
-  console.log("orientationReceived");
+  // console.log("orientationReceived");
   // ------------------------------ From vanilla-tilt.js (https://micku7zu.github.io/vanilla-tilt.js/)
 
   if (event.gamma === null || event.beta === null) {
