@@ -118,7 +118,7 @@ window.setInterval(function(){
     trackWithMouse(getMouseBobbed())
   } else {
     //use tilt instead
-    console.log("gyro");
+    console.log("gyro2");
     trackWithGyroscope(getGyroscopeAnglesLerped(true))
   }
 
