@@ -111,12 +111,14 @@ window.setInterval(function(){
   var frameSmooth = 1 - Math.pow(mouseSmoothing, dt / 1000)
 
   if (getAspectRatio() > 1) {
+    console.log("mouse");
     //Use the mouse position to track
     mouseLerp(frameSmooth)
     mouseBob(bobrate, bobmagnitude)
     trackWithMouse(getMouseBobbed())
   } else {
     //use tilt instead
+    console.log("gyro");
     trackWithGyroscope(getGyroscopeAnglesLerped(true))
   }
 
